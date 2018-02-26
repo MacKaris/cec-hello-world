@@ -7,6 +7,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():    
+	print ("spede")
 	return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
 	return "Rock rock! \n"    
 
