@@ -6,8 +6,6 @@ from flask import Flask
 application = Flask(__name__)
 
 @application.route("/")
-
-print("on tamakin saatana tyomaa")
 def hello():    
 	print ("spede")
 	#return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
@@ -26,9 +24,11 @@ def hello():
 		f.closed
 
 	with open('log', 'r') as f:
+		result = []
 		for line in f:
-			print (line)
-		f.closed
+			result.append(line)
+	f.closed
+	return result
 
 if __name__ == "__main__":
 	application.run()
