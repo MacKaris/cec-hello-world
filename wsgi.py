@@ -9,7 +9,7 @@ application = Flask(__name__)
 def hello():
     
     	return "Hello World! Greetings from "+socket.gethostname()+"\n"
-    
+	return "Rock rock! \n"    
 
 	FILE_NAME = "log"
 	if (os.path.isfile(FILE_NAME)):
