@@ -7,7 +7,7 @@ application = Flask(__name__)
 
 @application.route("/")
 def hello():    
-	return "Hello World! Greetings from "+socket.gethostname()+"\n"
+	return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
 	return "Rock rock! \n"    
 
 	FILE_NAME = "log"
