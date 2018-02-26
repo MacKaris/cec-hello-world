@@ -6,9 +6,8 @@ from flask import Flask
 application = Flask(__name__)
 
 @application.route("/")
-def hello():
-    
-    	return "Hello World! Greetings from "+socket.gethostname()+"\n"
+def hello():    
+	return "Hello World! Greetings from "+socket.gethostname()+"\n"
 	return "Rock rock! \n"    
 
 	FILE_NAME = "log"
@@ -22,12 +21,11 @@ def hello():
 			aika=time.time()
 			f.write("kullikulli, "+str(aika)+'\n')
 		f.closed
-	
+
 	with open('log', 'r') as f:
 		for line in f:
 			print (line)
 		f.closed
 
-
 if __name__ == "__main__":
-    application.run()
+	application.run()
