@@ -7,7 +7,6 @@ application = Flask(__name__)
 
 @application.route("/hello")
 def hello():    
-	print ("spede")
 	return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
 
 @application.route("/")
@@ -17,12 +16,12 @@ def log():
 	if (os.path.isfile(FILE_NAME)):
 		with open('log', 'a') as f:
 			aika=time.time()
-			f.write(socket.gethostname()+" : "+str(aika)+'\n')
+			f.write(socket.gethostname()+" : "+str(aika)+'<br/>')
 		f.closed
 	else:
 		with open('log', 'w') as f:
 			aika=time.time()
-			f.write(socket.gethostname()+" : "+str(aika)+'\n')
+			f.write(socket.gethostname()+" : "+str(aika)+'<br/>')
 		f.closed
 
 	with open('log', 'r') as f:
