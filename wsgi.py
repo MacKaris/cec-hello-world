@@ -5,11 +5,13 @@ from flask import Flask
 
 application = Flask(__name__)
 
-@application.route("/")
+@application.route("/hello")
 def hello():    
 	print ("spede")
-	#return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
-	#return "Rock rock! \n"    
+	return "Hello Wooiorld! Greetings from "+socket.gethostname()+"\n"
+
+@application.route("/")
+def log():    
 
 	FILE_NAME = "log"
 	if (os.path.isfile(FILE_NAME)):
@@ -24,9 +26,7 @@ def hello():
 		f.closed
 
 	with open('log', 'r') as f:
-		result = []
-		for line in f:
-			result.append(line)
+		result = f.read()
 	f.closed
 	return result
 
